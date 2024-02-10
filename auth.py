@@ -5,4 +5,5 @@ dictionary={
     'name':'fazil',
     'marks':56
 }
+
 collection.insert_one(document=dictionary)
