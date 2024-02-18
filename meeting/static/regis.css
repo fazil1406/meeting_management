@@ -6,12 +6,19 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-image: url("meeting.jpg");
+  background-repeat: no-repeat;
+}
+h1{
+  text-align:center;
+ 
+
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
   padding: 20px;
   width: 500px;
   background-color: white;
@@ -28,10 +35,12 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  align-content:flex-start;
+  
 }
 
 .form-control label {
-  font-weight: Bold;
+  font-weight:bold;
   margin-bottom: 10px;
 }
 
@@ -39,7 +48,8 @@ body {
   border: 1px solid Black;
   border-radius: 4px;
   padding: 12px 24px;
-  outline: solid;
+
+  width:90%;
 }
 
 .but  {
@@ -49,7 +59,8 @@ body {
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
-  margin-left:58.5%;
+  margin-left:79%;
+  width:100px;
 
 }
 

@@ -1,1 +1,38 @@
-<h1>welcome to my world {{name}}</h1>
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'login.css'%}" />
+    <title>Login</title>
+  </head>
+  <body>
+    <form action="login" method="post">
+      <div class="login_form">
+        <h1>Welcome Back</h1>
+        <div class="use">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+            required
+          />
+        </div>
+        <div class="pass">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <button class="log" type="submit">Log in</button>
+      </div>
+    </form>
+  </body>
+</html>
