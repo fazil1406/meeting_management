@@ -9,20 +9,18 @@ body {
   background-image: url("meeting.jpg");
   background-repeat: no-repeat;
 }
-h1{
-  text-align:center;
- 
-
+h1 {
+  text-align: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  
+
   padding: 20px;
   width: 500px;
   background-color: white;
-  padding:20px
+  padding: 20px;
   border-radius: 4px;
   box-shadow: 0 2px 4px black;
   margin: 50px auto;
@@ -35,12 +33,11 @@ h1{
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  align-content:flex-start;
-  
+  align-content: flex-start;
 }
 
 .form-control label {
-  font-weight:bold;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
@@ -49,19 +46,18 @@ h1{
   border-radius: 4px;
   padding: 12px 24px;
 
-  width:90%;
+  width: 90%;
 }
 
-.but  {
+.but {
   background-color: darkcyan;
   color: white;
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
-  margin-left:79%;
-  width:100px;
-
+  margin-left: 79%;
+  width: 100px;
 }
 
 .but:hover {
