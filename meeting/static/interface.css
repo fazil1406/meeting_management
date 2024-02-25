@@ -1,0 +1,77 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+#main {
+  border-bottom: 2px solid black;
+  background-color: black;
+}
+
+#meeting {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+#clgname {
+  font-size: 40px;
+  color: blue;
+  text-align: center;
+  -webkit-text-stroke: 2px white;
+}
+
+#signin {
+  height: 35px;
+  width: 80px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  font-size: 15px;
+  float: right;
+  margin-right: 10px;
+}
+#tsheet {
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  height: 40px;
+  margin-left: 70px;
+  font-weight: bold;
+}
+#content {
+  background-color: white;
+}
+/* Table */
+.styled-table {
+  margin-top: 50px;
+  margin-left: 80px;
+  width: 90%;
+  height: 500px;
+  border: 2 px solid black;
+  background-color: aquamarine;
+}
+.styled-table,
+.styledtable td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.styled-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: 25px;
+}
+.styled-table tr {
+  font-weight: bold;
+  font-size: 20px;
+  border-color: black;
+}
+.im {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+
+  left: 18.5%;
+  border-radius: 50%;
+}
