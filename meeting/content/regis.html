@@ -11,7 +11,28 @@
   <body>
     <div class="container">
       <h1>Create your account</h1>
-      <form action="register" method="post">
+      <form action="register" method="POST">
+        {% csrf_token %}
+        <div class="form-control">
+          <label for="firstname">First Name:</label>
+          <input
+            type="text"
+            id="firstname"
+            name="first_name"
+            placeholder="Enter your First Name"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="lastname">Last Name:</label>
+          <input
+            type="text"
+            id="lastname"
+            name="last_name"
+            placeholder="Enter your last name"
+            required
+          />
+        </div>
         <div class="form-control">
           <label for="username">Username:</label>
           <input

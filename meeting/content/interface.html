@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{%static 'interface.css'%}" />
   </head>
   <body>
+    {% csrf_token %}
     <header id="main">
       <img class="im" src="{%static 'aiktc.jpg'%}" alt="Logo" />
       <div id="clgname">
