@@ -3,23 +3,26 @@ from django.http import HttpResponse
 from myapp.models import register
 from django.contrib.auth.models import User,auth
 # Create your views here.
-def regis(request):
+def register(request):
    if request.method=='POST':
-      first_name=request.POST.get['first_name'],
-      last_name=request.POST.get['last_name'],
-      username=request.POST['username'],
-      email=request.POST.get['email'],
-      password=request.POST['password'],
-      comfirm_password=request.POST['confirm_password'],
-      Register=User.objects.create_user(First_name= first_name,  Last_Name=last_name, Username=username,  Email=  email,Password=password)
-      Register.save()
+      Firstname=request.POST['one']
+      Lastname=request.POST['last']
+      Username=request.POST['Username']
+      Email=request.POST['Email']
+      Password=request.POST['Password']
+      comfirm_password=request.POST['Confirmpassword']
+
+      user=User.objects.create_user(first_name= Firstname,  last_name=Lastname, username=Username,  email=Email,password=Password)
+      user.save()
+
       print('User created')
-      return redirect('login')
+
+      return redirect('/')
       
       
    
    else:
-      return render(request,'regis.html')
+      return render(request=request,template_name='register.html')
 
 def login(request):
    return render(request,'login.html' )

@@ -10,13 +10,8 @@ class register(models.Model):
     Confirmpassword=models.CharField(max_length=100,unique=True)
 
     class Meta:
-        db_table='myapp_register' 
+        db_table='Register' 
 
-class User(AbstractUser):
-    First_name=models.CharField(max_length=100)
-    Last_Name=models.CharField(max_length=100)
-    Username=models.CharField(max_length=100,unique=True)
-    Email=models.EmailField(max_length=300,unique=True)
-    Password=models.CharField(max_length=100,unique=True)
-    Confirmpassword=models.CharField(max_length=100,unique=True)
+
+
     
