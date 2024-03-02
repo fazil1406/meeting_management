@@ -75,5 +75,10 @@
         <button class="but" type="submit">Register</button>
       </form>
     </div>
+    <div>
+      {%for message in messages%}
+      <h5>{{message}}</h5>
+      {%endfor%}
+    </div>
   </body>
 </html>
