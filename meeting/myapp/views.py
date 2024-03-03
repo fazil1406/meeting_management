@@ -27,7 +27,7 @@ def register(request):
             messages.success(request,'You Successfully Rgister')
       
          
-            return redirect('/')
+            return redirect('/login')
       else:
          return redirect('/register')
 
@@ -37,7 +37,18 @@ def register(request):
     
 
 def login(request):
-   return render(request,'login.html' )
+   if request.method=='POST':
+       Username=request.POST['Username']
+       Password=request.POST['Password']
+       user=auth.authenticate(username=Username,password=Password)
+       
+       if user is not None:
+          auth.login(request,user) 
+          return redirect('/home')
+       else:
+          return redirect('/login')
+   else:       
+      return render(request,'login.html' )
 
 def index(request):
    return render(request,'index.html')
@@ -45,3 +56,5 @@ def index(request):
 def interface(request):
    return render(request,'interface.html')
 
+def meeting(request):
+   return render(request,'meeting.html')

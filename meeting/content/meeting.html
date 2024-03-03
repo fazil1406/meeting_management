@@ -1,0 +1,39 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Meeting</title>
+    <link rel="stylesheet" href="{%static 'meeting.css'%}" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Seminar Hall Booking</h1>
+      <br />
+      <form action="booking" method="post">
+        <label for="host-name">Host Name:</label><br />
+        <input type="text" id="host-name" name="host_name" required /><br />
+
+        <label for="class-name">Class Name:</label><br />
+        <input type="text" id="class-name" name="class_name" required /><br />
+
+        <label for="no-of-students">Number of Students Present:</label><br />
+        <input
+          type="number"
+          id="no-of-students"
+          name="no_of_students"
+          required
+        /><br />
+
+        <label for="host-name">Subject:</label><br />
+        <input type="text" id="host-name" name="host_name" required /><br />
+
+        <label for="host-name">Timing:</label><br />
+        <input type="text" id="host-name" name="host_name" required /><br />
+
+        <input type="submit" value="Book Meeting Room" />
+      </form>
+    </div>
+  </body>
+</html>

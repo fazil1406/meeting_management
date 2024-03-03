@@ -38,6 +38,19 @@
   margin-left: 70px;
   font-weight: bold;
 }
+#booking_meeting {
+  background-color: cyan;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block; */
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  flex-direction: column;
+  box-sizing:border-box;
+}
 #content {
   background-color: white;
 }
