@@ -1,55 +1,56 @@
-
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 40px;
-    margin-top: 60px;
-    color: rgb(48, 1, 63);
-    text-decoration-line: underline;
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+  margin-top: 60px;
+  color: rgb(48, 1, 63);
+  text-decoration-line: underline;
 }
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  form {
-    width: 400px;
-    margin: 0 auto;
-  }
-  
-  label {
-    display: block;
-    margin-top: 5px;
-    font-size: 20px;
-  }
-  
-  input[type="text"], input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 2px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #a9d203;
-    color:rgb(132, 15, 6);
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-bottom: 100px;
-    margin-left: 10px;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #023e05;
-  }
-  
-  #container{
-    border: 2px solid black;
-    align-self: center;
-    background-color: rgb(196, 226, 233);
-  }
+  font-family: Arial, sans-serif;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #a9d203;
+  color: rgb(132, 15, 6);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 100px;
+  margin-left: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #023e05;
+}
+
+#container {
+  border: 2px solid black;
+  align-self: center;
+  background-color: rgb(196, 226, 233);
+}

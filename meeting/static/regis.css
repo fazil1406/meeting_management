@@ -6,8 +6,9 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("meeting.jpg");
+  background-image: url("hall.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 h1 {
   text-align: center;
@@ -16,10 +17,10 @@ h1 {
 .container {
   display: flex;
   flex-direction: column;
-
+  backdrop-filter: blur(20px);
   padding: 20px;
   width: 500px;
-  background-color: white;
+  //background-color: white;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 2px 4px black;

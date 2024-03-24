@@ -11,7 +11,8 @@
     <div id="container">
       <h1>Seminar Hall Booking</h1>
       <br />
-      <form action="booking" method="post">
+      <form action="meeting" method="post">
+        {% csrf_token %}
         <label for="host-name">Host Name:</label><br />
         <input type="text" id="host-name" name="host_name" required /><br />
 
@@ -27,12 +28,12 @@
         /><br />
 
         <label for="host-name">Subject:</label><br />
-        <input type="text" id="host-name" name="host_name" required /><br />
+        <input type="text" id="host-name" name="subject" required /><br />
 
         <label for="host-name">Timing:</label><br />
-        <input type="text" id="host-name" name="host_name" required /><br />
+        <input type="time" id="timing" name="timing" required /><br />
 
-        <input type="submit" value="Book Meeting Room" />
+        <input type="submit" />
       </form>
     </div>
   </body>
