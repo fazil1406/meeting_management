@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+
 # Create your models here.
 class register(models.Model):
     First_name=models.CharField(max_length=100)
@@ -10,7 +10,7 @@ class register(models.Model):
     Confirmpassword=models.CharField(max_length=100,unique=True)
 
     class Meta:
-        db_table='Register' 
+        db_table='Register'
 
 
 

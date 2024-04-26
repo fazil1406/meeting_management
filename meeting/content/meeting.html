@@ -1,40 +1,85 @@
 {%load static%}
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Meeting</title>
-    <link rel="stylesheet" href="{%static 'meeting.css'%}" />
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'meeting.css'%}" />
   </head>
   <body>
-    <div id="container">
-      <h1>Seminar Hall Booking</h1>
-      <br />
+    <div class="meeting-box">
+      <h1>Book Meeting</h1>
       <form action="meeting" method="post">
         {% csrf_token %}
-        <label for="host-name">Host Name:</label><br />
-        <input type="text" id="host-name" name="host_name" required /><br />
+        <div class="textbox">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Host Name" name="host_name" />
+        </div>
+        <div class="textbox">
+          <i class="fas fa-envelope"></i>
+          <input type="text" placeholder="Name of class" name="class_name" />
+        </div>
+        <div class="textbox">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="number"
+            placeholder="No. of students will attend the seminar"
+            name="no_of_students"
+          />
+        </div>
+        <div class="textbox">
+          <i class="fas fa-envelope"></i>
+          <input type="text" placeholder="Subject " name="subject" />
+        </div>
+        <div class="textbox">
+          <i class="fas fa-envelope"></i>
+          <input type="date" placeholder="Date:" name="date" id="date" />
+        </div>
+        <div class="textbox">
+          <i class="fas fa-envelope"></i>
+          <label for="start-time">Start Time:</label>
+          <input
+            type="time"
+            id="start-time"
+            name="start_time"
+            min="09:15"
+            max="17:15"
+            required
+          />
 
-        <label for="class-name">Class Name:</label><br />
-        <input type="text" id="class-name" name="class_name" required /><br />
+          <label for="end-time">End Time:</label>
+          <input
+            type="time"
+            id="end-time"
+            name="end_time"
+            min="09:15"
+            max="17:15"
+            required
+          />
+        </div>
 
-        <label for="no-of-students">Number of Students Present:</label><br />
-        <input
-          type="number"
-          id="no-of-students"
-          name="no_of_students"
-          required
-        /><br />
-
-        <label for="host-name">Subject:</label><br />
-        <input type="text" id="host-name" name="subject" required /><br />
-
-        <label for="host-name">Timing:</label><br />
-        <input type="time" id="timing" name="timing" required /><br />
-
-        <input type="submit" />
+        <input type="submit" value="Confirm Meeting" class="btn" />
       </form>
     </div>
+    {% if messages %} {% for message in messages %}
+    <span {%if message.tags%} class="{{message.tags}}" {%endif%}>
+      {{ message }}
+    </span>
+    {% endfor %} {% endif %}
+
+    <script>
+      // Get the current date
+      var today = new Date();
+
+      // Format the current date in YYYY-MM-DD format
+      var formattedDate = today.toISOString().split("T")[0];
+
+      // Set the minimum date for the input field to the current date
+      document.getElementById("date").min = formattedDate;
+    </script>
+    <script>
+      // Set the default values for start and end time inputs
+      document.getElementById("start_time").value = "09:15";
+      document.getElementById("end_time").value = "17:15";
+    </script>
   </body>
 </html>

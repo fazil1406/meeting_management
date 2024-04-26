@@ -15,16 +15,181 @@ form {
   width: 400px;
   margin: 0 auto;
 }
+body {
+  margin: 0;
+  padding: 0;
+  background: url(new.jpg) no-repeat;
+  background-size: cover;
+}
+
+.meeting-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 650px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.meeting-box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+
+.meeting-box .textbox {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 20px 0;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meeting-box .textbox i {
+  width: 40px;
+  text-align: center;
+}
+
+.meeting-box .textbox input {
+  border: none;
+  outline: none;
+  background: none;
+  color: #fff;
+  font-size: 20px;
+  width: 80%;
+  padding: 0 10px;
+}
+
+.meeting-box .btn {
+  width: 100%;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 20px 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.meeting-box .btn:hover {
+  background: #fff;
+  color: #000;
+}
+.signup {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+.signup a {
+  color: #fff;
+  text-decoration: none;
+}
 
 label {
   display: block;
   margin-top: 5px;
+  body {
+    margin: 0;
+    padding: 0;
+    background: url(new.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .meeting-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 500px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+
+  .meeting-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .meeting-box .textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 20px 0;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .meeting-box .textbox i {
+    width: 40px;
+    text-align: center;
+  }
+
+  .meeting-box .textbox input {
+    border: none;
+    outline: none;
+    background: none;
+    color: #fff;
+    font-size: 20px;
+    width: 80%;
+    padding: 0 10px;
+  }
+
+  .meeting-box .btn {
+    width: 100%;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px 0;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .meeting-box .btn:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  .signup {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .signup a {
+    color: #fff;
+    text-decoration: none;
+  }
   font-size: 20px;
 }
 
 input[type="text"],
-input[type="number"],
-input[type="time"] {
+input[type="number"] {
   width: 100%;
   padding: 10px;
   margin-top: 2px;
@@ -53,4 +218,22 @@ input[type="submit"]:hover {
   border: 2px solid black;
   align-self: center;
   background-color: rgb(196, 226, 233);
+}
+.info {
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Move text upwards */
+  height: 250px; /* Adjust height as needed */
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+.error {
+  color: red;
+  font-weight: bold;
 }

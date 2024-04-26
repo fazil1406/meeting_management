@@ -1,84 +1,55 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Page</title>
     <link rel="stylesheet" href="{% static 'regis.css' %}" />
   </head>
   <body>
-    <div class="container">
-      <h1>Create your account</h1>
+    <div class="register-box">
+      <h1>Register</h1>
+
       <form action="register" method="POST">
         {% csrf_token %}
-        <div class="form-control">
-          <label for="firstname">First Name:</label>
-          <input
-            type="text"
-            id="firstname"
-            name="one"
-            placeholder="Enter your First Name"
-            required
-          />
+        <div class="textbox">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="First-Name" name="one" />
         </div>
-        <div class="form-control">
-          <label for="lastname">Last Name:</label>
-          <input
-            type="text"
-            id="lastname"
-            name="last"
-            placeholder="Enter your last name"
-            required
-          />
+        <div class="textbox">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Last-Name" name="last" />
         </div>
-        <div class="form-control">
-          <label for="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            name="Username"
-            placeholder="Enter your username"
-            required
-          />
+        <div class="textbox">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Username" name="Username" />
         </div>
-        <div class="form-control">
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="Email"
-            placeholder="Enter your email"
-            required
-          />
+        <div class="textbox">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email" name="Email" />
         </div>
-        <div class="form-control">
-          <label for="password">Password:</label>
+        <div class="textbox">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" name="Password" />
+        </div>
+        <div class="textbox">
+          <i class="fas fa-lock"></i>
           <input
             type="password"
-            id="password"
-            name="Password"
-            placeholder="Enter your password"
-            required
-          />
-        </div>
-        <div class="form-control">
-          <label for="confirm_password">Confirm Password:</label>
-          <input
-            type="password"
-            id="confirm_password"
+            placeholder="Confirm Password"
             name="Confirmpassword"
-            placeholder="Enter your confirm password"
-            required
           />
         </div>
-        <button class="but" type="submit">Register</button>
+        <input type="submit" value="SIGN UP" class="btn" />
+        <p class="signup">
+          Already have an account? <a href="{%url 'myapp:login' %}">Sign in</a>
+        </p>
       </form>
     </div>
-    <div>
-      {%for message in messages%}
-      <h5>{{message}}</h5>
-      {%endfor%}
-    </div>
+    {% if messages %} {% for message in messages %}
+    <span {%if message.tags%} class="{{message.tags}}" {%endif%}>
+      {{ message }}
+    </span>
+    {% endfor %} {% endif %}
   </body>
 </html>

@@ -1,66 +1,105 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("hall.jpg");
-  background-repeat: no-repeat;
+  background: url(new.jpg) no-repeat;
   background-size: cover;
 }
-h1 {
+
+.register-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.register-box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+
+.register-box .textbox {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 20px 0;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-box .textbox i {
+  width: 40px;
   text-align: center;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  backdrop-filter: blur(20px);
-  padding: 20px;
-  width: 500px;
-  //background-color: white;
-  padding: 20px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px black;
-  margin: 50px auto;
-}
-.form-control input:focus {
-  border-color: black;
-  box-shadow: 0 0 8px 0 black;
-}
-.form-control {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  align-content: flex-start;
-}
-
-.form-control label {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.form-control input {
-  border: 1px solid Black;
-  border-radius: 4px;
-  padding: 12px 24px;
-
-  width: 90%;
-}
-
-.but {
-  background-color: darkcyan;
-  color: white;
+.register-box .textbox input {
   border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-left: 79%;
-  width: 100px;
+  outline: none;
+  background: none;
+  color: #fff;
+  font-size: 20px;
+  width: 80%;
+  padding: 0 10px;
 }
 
-.but:hover {
-  background-color: cyan;
+.register-box .btn {
+  width: 100%;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 20px 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.register-box .btn:hover {
+  background: #fff;
+  color: #000;
+}
+.signup {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+.signup a {
+  color: #fff;
+  text-decoration: none;
+}
+.info {
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Move text upwards */
+  height: 250px; /* Adjust height as needed */
+}
+.success {
+  color: green;
+  font-weight: bold;
+}
+.error {
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Move text upwards */
+  height: 250px; /* Adjust height as needed */
 }

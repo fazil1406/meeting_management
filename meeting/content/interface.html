@@ -25,80 +25,36 @@
       <table class="styled-table">
         <thead>
           <tr>
-            <th></th>
-            <th>09.15-10.15</th>
-            <th>10.15-11.15</th>
-            <th>11.15-12.15</th>
-            <th>12.15-01.15</th>
-            <th>02.15-03.15</th>
-            <th>03.15-04.15</th>
-            <th>04.15-05.15</th>
+            <th>DATE</th>
+            <th>HOST-NAME</th>
+            <th>CLASS-NAME</th>
+            <th>SUBJECT</th>
+            <th>NO. OF STUDENTS</th>
+            <th>START-TIMING</th>
+            <th>END-TIMING</th>
           </tr>
         </thead>
+        {% block content %}
+
         <tbody>
+          {% for i in interface %}
           <tr>
-            <td>Monday</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{i.Datee}}</td>
+            <td>{{i.host_name}}</td>
+            <td>{{i.class_name }}</td>
+            <td>{{i.subject}}</td>
+            <td>{{i.students}}</td>
+            <td>{{i.starttiming}}</td>
+            <td>{{i.endtiming}}</td>
           </tr>
-          <tr>
-            <td>Tuesday</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Wednesday</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Thursday</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Friday</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Saturday</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+
+          {% endfor %}
         </tbody>
+
+        {% endblock %}
       </table>
     </div>
+
     <footer></footer>
   </body>
 </html>

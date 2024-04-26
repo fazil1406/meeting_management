@@ -1,71 +1,91 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
-  //background: white;
-  font-family: Arial, sans-serif;
-  background-image: url("hall.jpg");
-  background-repeat: no-repeat;
+  padding: 0;
+  background: url(new.jpg) no-repeat;
   background-size: cover;
 }
-h1 {
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+
+.login-box .textbox {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 20px 0;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box .textbox i {
+  width: 40px;
   text-align: center;
 }
-.login_form {
-  //background-color: white;
-  backdrop-filter: blur(20px);
-  padding: 20px;
-  border: 1px solid white;
-  box-shadow: 0 2px 4px black;
-  width: 500px;
-  height: 300px;
-}
 
-.use {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-.use input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid black;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-.pass {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-.pass input {
-  display: flex;
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid black;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-
-.login_form input:focus {
-  background-color: white;
-  color: black;
-  padding: 10px 20px;
+.login-box .textbox input {
   border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  box-shadow: 0 0 8px 0 black;
-}
-.log {
-  margin-top: 8%;
-  margin-left: 88%;
-  width: 60px;
-  height: 40px;
-  background: darkcyan;
+  outline: none;
+  background: none;
+  color: #fff;
+  font-size: 20px;
+  width: 80%;
+  padding: 0 10px;
 }
 
-.log:hover {
-  background-color: cyan;
+.login-box .btn {
+  width: 100%;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 20px 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.login-box .btn:hover {
+  background: #fff;
+  color: #000;
+}
+.signup {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+.info {
+  color: blue;
+  font-weight: bold;
+}
+.success {
+  color: green;
+  font-weight: bold;
+}
+.error {
+  color: red;
+  font-weight: bold;
 }
